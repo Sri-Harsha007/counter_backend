@@ -24,9 +24,12 @@ SECRET_KEY = 'django-insecure-*1z5p4j-+ew2bbq2cs8s=-5==g1foa0iiqww)84m2vxd^cvc&$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+import os
 ALLOWED_HOSTS = ['*']
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # Application definition
 CORS_ORIGIN_ALLOW_ALL = True
